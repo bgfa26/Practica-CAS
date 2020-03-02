@@ -1,0 +1,14 @@
+{
+  "name": "angularjs",
+  "version": "1.0.0",
+  "description": "Curso de Angular JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Barbara Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9"
+  }
+}
