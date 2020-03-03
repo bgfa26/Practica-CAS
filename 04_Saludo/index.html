@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular JS</title>
+    <link rel="stylesheet" href="style.css">
     <script src="../node_modules/angular/angular.js"></script>
 </head>
 <body ng-app>
@@ -18,13 +19,16 @@
     </section>
     <section ng-init="listaDeseos = []">
         <header>
-            <h2>Iteraciones: Lista de deseos</h2>
+            <h2>Iteraciones</h2>
         </header>
         <input type="text" placeholder="Dime un deseo" ng-model="deseo"></input>
         <button type="button" ng-click=" listaDeseos.push(deseo); deseo = '' ">Añadir</button>
-        <ul>
-            <li ng-repeat="item in listaDeseos track by $index">{{item}} ({{$index + 1}})</li>
-        </ul>
+        <div ng-if="listaDeseos.length">
+            <h3>Lista Deseos</h3>
+            <ul>
+                <li ng-repeat="item in listaDeseos track by $index">{{item}} ({{$index + 1}})</li>
+            </ul>
+        </div>
     </section>
     <div ng-include=" '_footer.html' "></div>
 </body>

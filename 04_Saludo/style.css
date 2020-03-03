@@ -1,0 +1,12 @@
+header{
+    margin-bottom: 2rem;
+}
+
+footer {
+    margin-top : 2rem;
+}
+
+div>header, footer {
+    background-color: darkblue;
+    color: lightblue;
+}
