@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular JS</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app>
+    <div ng-include="  '_head.html' "></div>
+    <section>
+        <header>
+            <h2>Doble Binding en AngularJS: Saludo</h2>
+        </header>
+        <input type="text" placeholder="Dime tu nombre" ng-model="nombre"></input>
+        <button type="button" ng-click="nombre=''">Borrar</button>
+        <p> Hola {{ nombre == 'Pepe' ? 'Jose' : nombre.toUpperCase()}}</p>
+    </section>
+    <section ng-init="listaDeseos = []">
+        <header>
+            <h2>Iteraciones: Lista de deseos</h2>
+        </header>
+        <input type="text" placeholder="Dime un deseo" ng-model="deseo"></input>
+        <button type="button" ng-click=" listaDeseos.push(deseo); deseo = '' ">Añadir</button>
+        <ul>
+            <li ng-repeat="item in listaDeseos track by $index">{{item}} ({{$index + 1}})</li>
+        </ul>
+    </section>
+    <div ng-include=" '_footer.html' "></div>
+</body>
+</html>
