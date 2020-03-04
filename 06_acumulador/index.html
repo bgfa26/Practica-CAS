@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Acumulador</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body ng-app="miApp" ng-controller="MainController as $ctrl"> 
+    <input type="number" placeholder="Incremento" ng-model="$ctrl.incremento">
+    <button ng-click="$ctrl.onOperar(+1)">+</button>
+    <button ng-click="$ctrl.onOperar(-1)">-</button>
+    <p>El resultado es {{ $ctrl.total }}</p>
+</body>
+</html>

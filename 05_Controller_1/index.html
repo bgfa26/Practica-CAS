@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Angular function jsonpData(url, config) {
+        return $$api.jsonp(url, config);
+    }
+    </title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body ng-app="miApp" ng-controller="MainController">
+<header>
+    <h1>Saludos</h1>
+</header>
+<input type="text" ng-model="nombre">
+<button ng-click="onBorrar()">Borrar</button>
+<p>Hola {{ nombre  }}</p>
+</body>
+</html>

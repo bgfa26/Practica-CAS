@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+    <script src="./main-controller.js"></script>
+</head>
+<body ng-app="miApp" ng-controller="MainController as $ctrl">
+        <header>
+            <h2>Tareas</h2>
+        </header>
+        <input type="text" placeholder="Dime una tarea" 
+        ng-model="$ctrl.nuevatarea"></input>
+        <button type="button" 
+        ng-click="$ctrl.addTarea()">Añadir</button>
+        
+        <div ng-if="$ctrl.listaTareas.length">
+            <h3>Lista Tareas</h3>
+            <ul>
+                <li ng-repeat="item in $ctrl.listaTareas track by $index">
+                    <input type="checkbox" ng-change="$ctrl.changeTarea(item.isCompleted, $index)"
+                        ng-model="item.isCompleted">
+                    <span>{{item.nombre}}</span> 
+                    <span class="boton" ng-click='$ctrl.borraTarea($index)'>🚮</span>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>
