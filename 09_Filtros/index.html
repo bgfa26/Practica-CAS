@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular JS</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./apps.js"></script>
+    <script src="./maincontroller.js"></script>
+</head>
+<body ng-app="otraApp" ng-controller='MainController as $ctrl'>
+    <header>
+        <h1>Filtros</h1>
+    </header>
+    <section> 
+    <p>Esto es un numero : {{$ctrl.number | number :1}}</p>
+    <p>Esto es un precio : {{$ctrl.precio | currency : '€'}}</p>
+    </section>
+   
+    <footer>
+        <address>{{$ctrl.autor | uppercase}}</address>
+        <div>{{$ctrl.fecha | date : 'fullDate'}}</div>
+    </footer>
+</body>
+</html>

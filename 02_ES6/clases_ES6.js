@@ -13,9 +13,10 @@ h1.altura = 179
 console.log(h1)
 
 class Alumno extends Humano{
-    constructor(user, edad, curso){
+    constructor(user, edad, curso, libro){
         super(user,edad)
         this.curso = curso
+        this.libro = libro
     }
     saludar(){
         super.saludar()
@@ -23,5 +24,11 @@ class Alumno extends Humano{
     }
 }
 
-const a1 = new Alumno('Maria', 26, 'AngularJS')
+const a1 = new Alumno('Maria', 26, 'AngularJS', new libro('No se que'))
 a1.saludar()
+
+class libro{
+    contructor(titulo){
+        this.titulo = titulo
+    }
+}

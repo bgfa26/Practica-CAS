@@ -6,25 +6,29 @@
     <title>Angular JS</title>
     <link rel="stylesheet" href="style.css">
     <script src="../node_modules/angular/angular.js"></script>
-    <script src="./app.js"></script> <!--Inicia la aplicacion-->
-    <script src="./main-controller.js"></script> <!--Inicia el controller, debe ir siempre debajo de app.js-->
+    <script src="../node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script src="./app.js" type="module"></script> <!--Inicia la aplicacion-->
 </head>
-<body ng-app="miApp" ng-controller="MainController as $ctrl">
+<body ng-app="miApp" ng-controller="MainController as $ctrl" ng-cloak>
         <header>
-            <h2>Tareas</h2>
+            <!--<h2>{{$ctrl.titulo}}</h2>-->
+            
+            <h2 ng-bind-html="$ctrl.titulo"></h2>
         </header>
         <input type="text" placeholder="Dime una tarea" 
         ng-model="$ctrl.nuevatarea"></input>
         <button type="button" 
         ng-click="$ctrl.addTarea()">Añadir</button>
         
-        <div ng-if="$ctrl.listaTareas.length">
+        <!--<div ng-if="$ctrl.listaTareas.length">-->
+        <div ng-show="$ctrl.listaTareas.length">
             <h3>Lista Tareas</h3>
             <ul>
                 <li ng-repeat="item in $ctrl.listaTareas track by $index">
                     <input type="checkbox" ng-change="$ctrl.changeTarea(item.isCompleted, $index)"
                         ng-model="item.isCompleted">
-                    <span>{{item.nombre}}</span> 
+                        <!--<span>{{item.nombre}}</span> -->
+                        <span ng-class="{completado: item.isCompleted}" ng-bind="item.nombre"></span>
                     <span class="boton" ng-click='$ctrl.borraTarea($index)'>🚮</span>
                 </li>
             </ul>

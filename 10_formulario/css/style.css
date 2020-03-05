@@ -1,0 +1,19 @@
+body{
+    margin: 0rem;
+}
+
+.header-wrapper,
+.footer-wrapper{
+    background-color: maroon;
+    color: bisque;
+}
+
+.header-wrapper .row,
+.footer-wrapper .row{
+    min-height: 15wh;
+
+}
+
+main{
+    min-height: 60wh;
+}

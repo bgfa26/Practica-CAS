@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de AngularJS</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="./js/app.js" type="module"></script>
+</head>
+
+<body ng-app="miApp" ng-controller="MainController as $ctrl">
+    <div class="header-wrapper" ng-include="$ctrl.header"></div>
+    <main class="container"></main>
+    <div class="footer-wrapper" ng-include="$ctrl.footer"></div>
+</body>
+</html>

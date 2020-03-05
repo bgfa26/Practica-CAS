@@ -1,0 +1,11 @@
+ul>li>span{ padding: 0rem 2rem;}
+ul {
+    list-style: none;
+}
+.boton { cursor: pointer;}
+
+.completado{
+    text-decoration: line-through;
+    font-style: italic;
+    color: darkslategray;
+}
