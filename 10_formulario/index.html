@@ -12,7 +12,10 @@
 
 <body ng-app="miApp" ng-controller="MainController as $ctrl">
     <div class="header-wrapper" ng-include="$ctrl.header"></div>
-    <main class="container"></main>
+    <main class="container">
+        <div ng-include="$ctrl.form"></div>
+        <!-- <button type="button" ng-click="$ctrl.onClick($event)">Probar</button> -->
+    </main>
     <div class="footer-wrapper" ng-include="$ctrl.footer"></div>
 </body>
 </html>
