@@ -17,3 +17,7 @@ body{
 main{
     min-height: 60wh;
 }
+
+.error{
+    color:red;
+}
