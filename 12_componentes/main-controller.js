@@ -1,5 +1,7 @@
 export class MainController{
-    constructor(){
-
+    constructor($locale){
+        'ngInject'
+        this.$locale = $locale
+        this.$locale.id = 'es-es'
     }
 }

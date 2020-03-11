@@ -1,0 +1,10 @@
+<input type="checkbox"
+    ng-change="$ctrl.changeTarea()"
+    ng-model="$ctrl.tarea.isCompleted">
+<span ng-class="{acabado: $ctrl.tarea.isCompleted}">
+    {{$ctrl.tarea.nombre}}
+</span>
+
+<span class="boton" ng-click='$ctrl.evBorrar($index)'>
+    🚮
+</span>

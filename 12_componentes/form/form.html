@@ -1,0 +1,18 @@
+<form>
+    <input type="text" placeholder="Dime una tarea" 
+          ng-model="$ctrl.tarea.nombre"></input>
+    <button type="button" 
+          ng-click="$ctrl.addTarea()">Añadir</button>  
+</form>
+
+<div ng-if="$ctrl.tareas.length">
+    <h3>Lista Tareas</h3>
+    <ul>
+        <li ng-repeat="item in $ctrl.tareas track by $index">
+            <cas-tarea class="coloreado"
+                tarea="item" 
+                ev-borrar="$ctrl.borraTarea($index)">
+            </cas-tarea>
+        </li>
+    </ul>
+</div>

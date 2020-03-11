@@ -1,0 +1,32 @@
+body{
+    margin: 3rem;
+}
+main {
+    min-height: 70vh;
+}
+
+form{
+    margin: 3rem 0 rem;
+}
+
+.coloreado{
+    color: rgb(7, 112, 119);
+    background-color: rgb(78, 210, 219);
+}
+
+ul>li>span{ padding: 0rem 2rem;}
+ul {
+    list-style: none;
+}
+
+li{
+    padding: 1rem;
+    margin: 1rem;
+}
+.boton { cursor: pointer;}
+
+.completado{
+    text-decoration: line-through;
+    font-style: italic;
+    color: darkslategray;
+}
