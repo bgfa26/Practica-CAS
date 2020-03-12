@@ -14,3 +14,4 @@ console.log(typeof newData, newData)
 
 let deepClon = JSON.parse(JSON.stringify(data))
 //Manera de hacer el deep clon de todos los niveles
+
