@@ -5,7 +5,6 @@ import {FormController} from './form/form.js'
 import {TareaController} from './tarea/tarea.js'
 
 angular.module('miApp', [
-   'ui.router',
    'ngLocale', 
    'LocalStorageModule'])
 .controller('MainController', MainController)
