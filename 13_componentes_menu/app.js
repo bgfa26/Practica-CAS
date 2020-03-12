@@ -1,21 +1,28 @@
 import {MainController} from './main-controller.js'
-import {HeaderController} from './header/header.js'
-import {FooterController} from './footer/footer.js'
 import {FormController} from './form/form.js'
 import {TareaController} from './tarea/tarea.js'
+import {HomeController} from './home/home.js'
+
 
 angular.module('miApp', [
+   'core',
    'ui.router',
    'ngLocale', 
    'LocalStorageModule'])
 .controller('MainController', MainController)
-.component('casHeader', {
-    templateUrl: './header/header.html',
-    controller: HeaderController
-})
-.component('casFooter', {
-   templateUrl :'./footer/footer.html',
-   controller: FooterController
+
+.config(function($stateProvider, $urlRouterProvider){
+   
+   $stateProvider.state('home', { 
+      url:'/',  
+      templateUrl: './home/home.html', 
+      controller: HomeController})
+   
+   $stateProvider.state('form', { 
+      url:'/',  
+      templateUrl: './form/form.html', 
+      controller: FormController})
+
 })
 
 .component('casForm', {
@@ -31,4 +38,4 @@ angular.module('miApp', [
        evBorrar: '&', 
        evChange: '&' /* Evento Propio */
     }
- })
+   })

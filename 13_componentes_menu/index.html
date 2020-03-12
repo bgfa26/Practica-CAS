@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular JS</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="./style.css">    
     <script src="../node_modules/angular/angular.js"></script>
     <script src="https://code.angularjs.org/1.7.9/i18n/angular-locale_es-es.js"></script>
     <script src="../node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
     <script src="../node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <script src="./app.js" type="module"></script> <!--Inicia la aplicacion-->
+    <script src="./core/core.js" type="module"></script>
 </head>
 <body ng-app="miApp" ng-controller="MainController as $ctrl" ng-cloak>
     <cas-header></cas-header>
     <main>
-        
+        <div ui-view></div>
     </main>
     <cas-footer></cas-footer>
 </body>

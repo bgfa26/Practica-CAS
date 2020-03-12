@@ -30,3 +30,17 @@ li{
     font-style: italic;
     color: darkslategray;
 }
+nav ul {
+    display : flex;
+}
+
+nav li {
+    margin:0;
+    padding: 0.5rem 1 rem;
+    display: block;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
