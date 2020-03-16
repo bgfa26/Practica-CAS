@@ -1,0 +1,23 @@
+<h2>Libros en Google</h2>
+<input type="text" name="" ng-model='$ctrl.clave' id="" 
+placeholder="Clave de busqueda">
+<button ng-click='$ctrl.onBuscar()'>Buscar</button>
+
+<div ng-show="$ctrl.libros.length">
+    <h2>Resultado</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Autores</th>
+            <th>Titulo</th>
+        </tr>
+        <tr ng-repeat="item in $ctrl.libros">
+            <td>{{item.id}}</td>
+            <td>{{item.autores}}</td>
+            <td>{{item.titulo}}</td>
+        </tr>
+    </table>
+</div>
+<div ng-show="$ctrl.error">
+    <p>{{$ctrl.error}}</p>
+</div>
