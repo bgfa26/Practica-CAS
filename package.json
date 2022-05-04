@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.25",
-    "angular": "^1.7.9",
+    "angular": "^1.8.3",
     "angular-local-storage": "^0.7.1",
     "angular-sanitize": "^1.7.9",
     "bootstrap": "^4.4.1"
